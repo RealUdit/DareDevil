@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Bottle - Truth or Dare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <div class="flowers">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+    </div>
+    <div class="blur-layer"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Spin the Bottle</h1>
+            <h2>Truth or Dare</h2>
+        </header>
+
+        <button id="managePlayersBtn" class="manage-players-btn animate-btn">
+            Manage Players
+        </button>
+
+        <main>
+            <div class="game-area">
+                <div class="bottle-container">
+                    <div class="player-positions">
+                        <!-- Player positions will be dynamically generated -->
+                    </div>
+                    <div class="bottle">
+                        <img src="bottle.png.png" alt="Bottle">
+                    </div>
+                </div>
+                <button id="spinBtn" class="spin-button">SPIN</button>
+            </div>
+
+            <div class="modal" id="playerModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Players</h3>
+                        <span class="close-modal">&times;</span>
+                    </div>
+                    <div class="player-form">
+                        <input type="text" id="playerNameInput" placeholder="Enter player name...">
+                        <button id="addPlayerBtn">Add Player</button>
+                    </div>
+                    <div class="players-list">
+                        <!-- Player list will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="promptModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="selectedPlayerName">player 1</h3>
+                        <span class="close-modal">&times;</span>
+                    </div>
+                    <div class="prompt-mode-buttons">
+                        <button id="truthPromptsBtn" class="prompt-mode-btn active">Truth</button>
+                        <button id="darePromptsBtn" class="prompt-mode-btn">Dare</button>
+                    </div>
+                    <div class="prompts-list">
+                        <!-- Prompts will be dynamically generated -->
+                    </div>
+                    <button id="newPromptsBtn" class="new-prompts-btn">More Ideas</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <audio id="spinSound" src="spin-sound.mp3"></audio>
+    <audio id="selectSound" src="select-sound.mp3"></audio>
+
+    <!-- Contact the Developer Button -->
+    <a href="https://instagram.com/real_udit01" target="_blank" class="contact-developer-btn">
+        <div class="btn-content">
+            <div class="instagram-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+                </svg>
+            </div>
+            <span>Contact the Developer</span>
+        </div>
+    </a>
+
+    <!-- Creative Footer with Credits -->
+    <footer class="creative-footer">
+        <div class="footer-content">
+            <div class="credit-card">
+                <div class="credit-front">
+                    <div class="credit-logo">
+                        <span class="design-element"></span>
+                        <span class="design-element"></span>
+                    </div>
+                    <div class="credit-title">Created By</div>
+                    <div class="credit-name">Udit Chand</div>
+                    <div class="credit-chip">
+                        <span class="chip-line"></span>
+                        <span class="chip-line"></span>
+                        <span class="chip-line"></span>
+                    </div>
+                </div>
+                <div class="credit-back">
+                    <div class="credit-strip"></div>
+                    <div class="credit-info">
+                        <div class="info-row">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">uditchand01@gmail.com</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Instagram</span>
+                            <span class="info-value">@real_udit01</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Copyright</span>
+                            <span class="info-value">© 2025 All Rights Reserved</span>
+                        </div>
+                    </div>
+                    <div class="credit-signature">
+                        <svg viewBox="0 0 100 30" width="100" height="30">
+                            <path d="M10,20 Q20,5 30,20 Q40,35 50,20 Q60,5 70,20 Q80,35 90,20" stroke="#fff" fill="none" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="prompts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
